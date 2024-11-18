@@ -1,0 +1,1226 @@
+/* 层级标题样式 */
+.rjsf h1,
+.rjsf legend:first-of-type {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #1890ff;
+}
+
+.rjsf h2,
+.rjsf .subscriptions-field>legend,
+.rjsf .templates-field>legend,
+.rjsf .profiles-field>legend {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #262626;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.rjsf h3,
+.rjsf .array-item>legend,
+.rjsf .field-object>legend {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #434343;
+  margin: 1rem 0 0.75rem;
+}
+
+.rjsf h4,
+.rjsf .field-object .field-object>legend {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #595959;
+  margin: 0.75rem 0 0.5rem;
+}
+
+/* 网格布局和边框效果 */
+.rjsf .panel-card {
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+/* 主要分类容器 */
+.rjsf .subscriptions-field,
+.rjsf .templates-field,
+.rjsf .profiles-field {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 数组项容器 */
+.rjsf .array-item {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* 对象字段容器 */
+.rjsf .field-object {
+  margin: 1rem 0;
+  padding: 1.25rem;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+}
+
+/* 嵌套对象字段 */
+.rjsf .field-object .field-object {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #f0f0f0;
+}
+
+/* 内联字段组 */
+.rjsf .field-inline {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #f5f5f5;
+}
+
+/* 字段描述文本 */
+.rjsf .field-description {
+  font-size: 0.9rem;
+  color: #595959;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* 主要分类的描述文本 */
+.rjsf .subscriptions-field>.field-description,
+.rjsf .templates-field>.field-description,
+.rjsf .profiles-field>.field-description {
+  font-size: 1rem;
+  color: #434343;
+  margin: 0.75rem 0 1.25rem;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  border-left: 4px solid #1890ff;
+}
+
+/* 帮助文本 */
+.rjsf .help-block {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0;
+}
+
+/* 表单控件容器 */
+.rjsf .form-group {
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.rjsf .form-group:hover {
+  background: #fafafa;
+}
+
+/* 数组操作按钮组 */
+.rjsf .array-item-toolbox {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e8e8e8;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* 控件样式 */
+.rjsf .form-control,
+.rjsf .ant-input,
+.rjsf .ant-select,
+.rjsf .ant-input-number {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.rjsf .form-control:hover,
+.rjsf .ant-input:hover,
+.rjsf .ant-select:hover,
+.rjsf .ant-input-number:hover {
+  border-color: #40a9ff;
+}
+
+.rjsf .form-control:focus,
+.rjsf .ant-input:focus,
+.rjsf .ant-select:focus,
+.rjsf .ant-input-number:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --handle-color: #e8e8e8;
+  --handle-hover-color: #d0d0d0;
+  --handle-drag-color: #c0c0c0;
+  --form-control-width: 200px;
+}
+
+/* 重置浏览器默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 确保所有父容器都占满高度 */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* 应用容器 */
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 头部样式 */
+.app-header {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+/* 主内容区域 */
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 面板卡片样式 */
+.panel-card {
+  height: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* 表单项样式 */
+.form-item-horizontal {
+  margin-bottom: 16px;
+}
+
+.form-item-horizontal .ant-form-item-row {
+  display: flex;
+  flex-flow: row nowrap !important;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.form-item-horizontal .ant-form-item-label {
+  flex: 0 0 auto;
+  text-align: left;
+  padding-right: 16px;
+}
+
+/* .form-item-horizontal .ant-form-item-label > label {
+  color: #666;
+} */
+
+.form-item-horizontal .ant-form-item-control {
+  flex: 0 0 var(--form-control-width);
+  text-align: right;
+}
+
+.form-item-horizontal .ant-form-item-control-input {
+  text-align: right;
+}
+
+.form-item-horizontal .ant-form-item-explain {
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* 特殊控件样式 */
+.form-item-horizontal .ant-switch {
+  margin-top: 4px;
+}
+
+.form-item-horizontal .ant-input-number {
+  width: 100% !important;
+  text-align: right;
+}
+
+.form-item-horizontal .ant-input-number input {
+  text-align: right;
+}
+
+.form-item-horizontal .ant-input {
+  text-align: right;
+}
+
+.form-item-horizontal .ant-select {
+  width: 100% !important;
+  text-align: right;
+}
+
+.form-item-horizontal .ant-select-selection-item {
+  text-align: right;
+}
+
+/* JSON 预览区域 */
+.json-preview {
+  height: 100%;
+  text-align: left;
+}
+
+.json-preview pre {
+  padding: 16px !important;
+}
+
+/* 拖动手柄样式 */
+.resize-handle {
+  width: 4px !important;
+  background-color: var(--handle-color);
+  transition: background-color 0.2s;
+  margin: 0 8px;
+}
+
+.resize-handle:hover {
+  background-color: var(--handle-hover-color);
+}
+
+.resize-handle[data-resize-handle-active] {
+  background-color: var(--handle-drag-color);
+}
+
+/* 美化滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* 面板容器样式 */
+[data-panel-id] {
+  height: 100%;
+  width: 100%;
+}
+
+/* 表单样式优化 */
+.rjsf {
+  /* 移除表单默认边距 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 字段容器 */
+.rjsf .form-group {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* 字段标签 */
+.rjsf .control-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* 内联字段布局 */
+.rjsf .field-inline {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rjsf .field-inline .control-label {
+  margin-bottom: 0;
+}
+
+/* 数组字段样式 */
+.rjsf .array-item {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rjsf .array-item-toolbox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+/* 表单控件样式 */
+.rjsf .form-control,
+.rjsf .ant-input,
+.rjsf .ant-select,
+.rjsf .ant-input-number {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+}
+
+.rjsf .form-control:focus,
+.rjsf .ant-input:focus,
+.rjsf .ant-select:focus,
+.rjsf .ant-input-number:focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 标题和描述文本样式 */
+.rjsf .field-description {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.rjsf legend {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* 帮助文本样式 */
+.rjsf .help-block {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+/* 错误提示样式 */
+.rjsf .error-detail {
+  color: #ff4d4f;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* 按钮样式 */
+.rjsf .array-item-add button,
+.rjsf .array-item-move-up button,
+.rjsf .array-item-move-down button,
+.rjsf .array-item-remove button {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rjsf .array-item-add button {
+  background: #52c41a;
+  color: white;
+}
+
+.rjsf .array-item-remove button {
+  background: #ff4d4f;
+  color: white;
+}
+
+.rjsf .array-item-move-up button,
+.rjsf .array-item-move-down button {
+  background: #1890ff;
+  color: white;
+}
+
+/* 主要分类字段样式 */
+.rjsf .subscriptions-field,
+.rjsf .templates-field,
+.rjsf .profiles-field {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.rjsf .subscriptions-field>.field-description,
+.rjsf .templates-field>.field-description,
+.rjsf .profiles-field>.field-description {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* 折叠面板样式 */
+.object-field-template {
+  margin: 1rem 0;
+}
+
+.object-field-template.main-section {
+  margin: 1.5rem 0;
+}
+
+.field-title {
+  margin-bottom: 0.5rem;
+  color: #262626;
+}
+
+.field-collapse.ant-collapse {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.field-collapse.ant-collapse>.ant-collapse-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.field-collapse.ant-collapse>.ant-collapse-item:last-child {
+  border-bottom: none;
+}
+
+.field-collapse.ant-collapse>.ant-collapse-item>.ant-collapse-header {
+  padding: 12px 16px;
+  color: #262626;
+  font-weight: 500;
+  background: #fafafa;
+}
+
+.field-collapse.ant-collapse>.ant-collapse-item>.ant-collapse-content {
+  border-top: 1px solid #f0f0f0;
+}
+
+.field-collapse.ant-collapse>.ant-collapse-item>.ant-collapse-content>.ant-collapse-content-box {
+  padding: 16px;
+  background: white;
+}
+
+/* 嵌套折叠面板样式 */
+.field-collapse .field-collapse {
+  margin: 0.5rem 0;
+}
+
+.field-collapse .field-collapse.ant-collapse {
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+
+.field-collapse .field-collapse>.ant-collapse-item>.ant-collapse-header {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+/* 数组项折叠面板样式 */
+.array-item .field-collapse.ant-collapse {
+  margin-top: 0.5rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+
+.array-item .field-collapse>.ant-collapse-item>.ant-collapse-header {
+  background: #fafafa;
+  font-size: 0.95rem;
+}
+
+/* 主要分类的折叠面板样式 */
+.main-section>.field-collapse.ant-collapse {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main-section>.field-collapse>.ant-collapse-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.main-section>.field-collapse>.ant-collapse-item>.ant-collapse-header {
+  font-size: 1.1rem;
+  padding: 16px 20px;
+  background: linear-gradient(to right, #fafafa, white);
+}
+
+.main-section>.field-collapse>.ant-collapse-item>.ant-collapse-content>.ant-collapse-content-box {
+  padding: 20px;
+}
+
+/* 表单字段组样式 */
+.object-field-properties {
+  padding: 0.5rem;
+}
+
+.object-field-properties>div {
+  margin-bottom: 0.75rem;
+}
+
+.object-field-properties>div:last-child {
+  margin-bottom: 0;
+}
+
+/* 字段描述文本样式 */
+.field-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+  border-left: 3px solid #1890ff;
+}
+
+/* 简单字段内联布局 */
+.simple-field.field-inline {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.simple-field.field-inline:hover {
+  background: #fafafa;
+}
+
+.simple-field.field-inline .control-label {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #595959;
+}
+
+/* 单选框组样式 */
+.simple-field.field-inline .ant-radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 下拉框样式 */
+.simple-field.field-inline .ant-select {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 数字输入框样式 */
+.simple-field.field-inline .ant-input-number {
+  width: 100%;
+  max-width: 200px;
+}
+
+/* 文本输入框样式 */
+.simple-field.field-inline .ant-input {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* 帮助文本样式 */
+.simple-field.field-inline .help-block {
+  grid-column: 2;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+/* 错误提示样式 */
+.simple-field.field-inline .error-detail {
+  grid-column: 2;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #ff4d4f;
+}
+
+/* 复杂字段样式 */
+.object-field-template {
+  margin: 1rem 0;
+}
+
+.object-field-template .field-title {
+  margin-bottom: 0.5rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+/* 主要分类容器 */
+.main-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 折叠面板样式 */
+.field-collapse.ant-collapse {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+.field-collapse .ant-collapse-item {
+  border-bottom: none;
+}
+
+.field-collapse .ant-collapse-header {
+  padding: 12px 16px !important;
+  background: #fafafa;
+}
+
+/* 折叠面板标题 */
+.collapse-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.collapse-title {
+  font-size: 1rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+.collapse-type {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* 折叠面板内容 */
+.field-collapse .ant-collapse-content {
+  border-top: 1px solid #f0f0f0;
+}
+
+.field-collapse .ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+/* 表单控件样式 */
+.table-field-row .ant-input,
+.table-field-row .ant-select,
+.table-field-row .ant-input-number {
+  width: 100%;
+}
+
+.table-field-row .ant-select {
+  max-width: 300px;
+}
+
+.table-field-row .ant-input-number {
+  max-width: 200px;
+}
+
+.table-field-row .ant-radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+/* 帮助文本和错误提示 */
+.table-field-row .help-block,
+.table-field-row .error-detail {
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.table-field-row .help-block {
+  color: #8c8c8c;
+}
+
+.table-field-row .error-detail {
+  color: #ff4d4f;
+}
+
+/* 表格式布局容器 */
+.table-field-container {
+  width: 100%;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+/* 表格行 */
+.table-field-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-field-row:last-child {
+  border-bottom: none;
+}
+
+.table-field-row:hover {
+  background: #fafafa;
+}
+
+/* 标签样式 */
+.table-field-row .control-label {
+  padding: 0 16px;
+  font-size: 0.95rem;
+  color: #595959;
+  font-weight: 500;
+}
+
+/* 控件容器 */
+.table-field-row .form-group {
+  margin: 0;
+  padding: 8px 16px;
+  border-left: 1px solid #f0f0f0;
+}
+
+/* 复杂类型容器 */
+.complex-field-container {
+  margin: 1rem 0;
+}
+
+.complex-field-container.main-section {
+  margin: 1.5rem 0;
+}
+
+/* 复杂类型头部 */
+.complex-field-header {
+  margin-bottom: 0.75rem;
+}
+
+.complex-field-header .field-title {
+  font-size: 1.1rem;
+  color: #262626;
+  margin: 0 0 0.5rem;
+}
+
+.complex-field-header .field-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* 嵌套表格样式 */
+.field-collapse .table-field-container {
+  border: none;
+  border-radius: 0;
+}
+
+.field-collapse .table-field-row:first-child {
+  border-top: none;
+}
+
+/* 表单控件容器 */
+.form-group {
+  width: 100%;
+}
+
+/* 布尔值控件样式 */
+.table-field-row .ant-checkbox-wrapper,
+.table-field-row .ant-switch {
+  margin: 8px 0;
+}
+
+/* 枚举值下拉框样式 */
+.table-field-row .ant-select-selector {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 根容器 */
+.root-section {
+  margin: 1rem 0;
+}
+
+/* 表格式布局 */
+.table-field-container {
+  width: 100%;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+/* 表格行 */
+.table-field-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  min-height: 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-field-row:last-child {
+  border-bottom: none;
+}
+
+.table-field-row:hover {
+  background: #fafafa;
+}
+
+/* 标签和控件样式 */
+.table-field-row .control-label {
+  padding: 0 16px;
+  font-size: 0.95rem;
+  color: #595959;
+  font-weight: 500;
+}
+
+.table-field-row .form-group {
+  margin: 0;
+  padding: 8px 16px;
+  border-left: 1px solid #f0f0f0;
+}
+
+/* 折叠面板样式 */
+.field-collapse.ant-collapse {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: white;
+}
+
+.field-collapse .ant-collapse-item {
+  border-bottom: none;
+}
+
+.field-collapse .ant-collapse-header {
+  padding: 12px 16px !important;
+  background: #fafafa;
+}
+
+/* 折叠面板标题 */
+.collapse-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collapse-title {
+  font-size: 1rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+.collapse-type {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.collapse-description {
+  font-size: 0.9rem;
+  color: #8c8c8c;
+  margin-left: 8px;
+}
+
+/* 表单控件样式 */
+.table-field-row .ant-input,
+.table-field-row .ant-select {
+  width: 100%;
+}
+
+.table-field-row .ant-select {
+  max-width: 300px;
+}
+
+.table-field-row .ant-input-number {
+  width: 100%;
+  max-width: 200px;
+}
+
+.table-field-row .ant-radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+/* 帮助文本和错误提示 */
+.table-field-row .help-block,
+.table-field-row .error-detail {
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.table-field-row .help-block {
+  color: #8c8c8c;
+}
+
+.table-field-row .error-detail {
+  color: #ff4d4f;
+}
+
+/* 嵌套表格样式 */
+.field-collapse .table-field-container {
+  border: none;
+  border-radius: 0;
+}
+
+.field-collapse .table-field-row:first-child {
+  border-top: none;
+}
+
+/* 根节点样式 */
+.root-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* 字段模板样式 */
+.field-template {
+  display: contents;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.field-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+  border-left: 1px solid #f0f0f0;
+}
+
+/* 必填标记 */
+.required {
+  color: #ff4d4f;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+/* 复杂字段容器 */
+.complex-field-container {
+  margin: 0;
+}
+
+/* 表格式布局 */
+.table-field-container {
+  width: 100%;
+  background: white;
+}
+
+/* 表格行 */
+.table-field-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-field-row:last-child {
+  border-bottom: none;
+}
+
+.table-field-row:hover {
+  background: #fafafa;
+}
+
+/* 标签样式 */
+.control-label {
+  font-size: 0.95rem;
+  color: #595959;
+  font-weight: 500;
+}
+
+/* 折叠面板样式 */
+.field-collapse.ant-collapse {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: white;
+  margin-bottom: 8px;
+}
+
+.field-collapse .ant-collapse-item {
+  border-bottom: none;
+}
+
+.field-collapse .ant-collapse-header {
+  padding: 12px 16px !important;
+  background: #fafafa;
+}
+
+.field-collapse .ant-collapse-content {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 折叠面板标题 */
+.collapse-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collapse-title {
+  font-size: 1rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+.collapse-type {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  padding: 2px 8px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.collapse-description {
+  font-size: 0.9rem;
+  color: #8c8c8c;
+}
+
+/* 表单控件样式 */
+.field-content .ant-input,
+.field-content .ant-select {
+  width: 100%;
+}
+
+.field-content .ant-select {
+  max-width: 300px;
+}
+
+.field-content .ant-input-number {
+  width: 100%;
+  max-width: 200px;
+}
+
+.field-content .ant-radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+/* 帮助文本和错误提示 */
+.help-block,
+.error-detail {
+  font-size: 0.85rem;
+}
+
+.help-block {
+  color: #8c8c8c;
+}
+
+.error-detail {
+  color: #ff4d4f;
+}
+
+/* 嵌套折叠面板样式 */
+.field-collapse .field-collapse {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.field-collapse .field-collapse .ant-collapse-header {
+  background: transparent;
+}
+
+.field-collapse .field-collapse .ant-collapse-content {
+  border-top: none;
+}
